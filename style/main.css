@@ -1,0 +1,164 @@
+/* General */
+
+* {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  padding: 15px 0;
+}
+
+.row:after,
+.item-id:after {
+  content:'';
+  display: table;
+  clear: both;
+}
+
+.col3 { 
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.col5 {
+  width: 41.66%;
+  margin-left: 8.33%;
+}
+
+.col6 {
+  width: 50%;
+  padding: 10px;
+}
+
+.col8 {
+  width: 66.66%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+/* General - header */
+
+header {
+  padding: 30px 0;
+}
+
+ul.menu {
+  list-style: none;
+  width: 790px;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+ul.menu li {
+  float: left;
+  margin: 0 20px;
+}
+
+.menu-enter {
+  float: right;
+  margin-right: 20px;
+}
+
+
+/* General - footer */
+
+footer {
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-section {
+  float: left;
+  margin-right: 50px;
+}
+
+
+/*Index */
+
+.logo {
+  padding: 50px 0;
+  text-align: center;
+}
+
+
+/* Price */
+
+.classics {
+  text-align: center;
+}
+
+
+/* Catalog */
+
+.item-card {
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.item-card p {
+  text-transform: none;
+}
+
+ul.price-bar {
+  margin: 0;
+  padding: 0;
+}
+
+ul.price-bar li {
+  display: inline-block;
+  list-style: none;
+}
+
+ul.paginator li {
+  float: left;
+  list-style: none;
+}
+
+
+/* Item card */
+
+.item-id p {
+  float: left;
+}
+
+.item-id p.id-number {
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

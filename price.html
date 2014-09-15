@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Barbershop text page</title>
+  <title>Barbershop / price list</title>
+  <link href="style/main.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
-    <div class="layout-center-wrapper"> <!-- Обертка-центровщик -->
+    <div class="container"> <!-- Обертка-центровщик -->
       <nav>
         <ul class="menu">
           <li><a href="#">Главная</a></li>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
+          <li class="active"><a href="#">Прайс-лист</a></li>
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -27,7 +29,7 @@
   </header>
 
   <!-- Контентная часть -->
-  <div class="layout-center-wrapper">
+  <div class="container">
     <main>
 
       <h1>Barbershop Borodinski - прайс-лист</h1>
@@ -38,9 +40,9 @@
 
       <p class="classics">Истинно мужская классика</p>
 
-      <div class="top-row">
+      <div class="row">
 
-        <article class="top-left-column">
+        <div class="col col6">
           <h3>Мы используем только лучшие средства:</h3>
           <ul>
             <li>Baxter of California</li>
@@ -48,9 +50,9 @@
             <li>Suavecito</li>
             <li>Malin+Goetz</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="top-right-column">
+        <div class="col col6">
           <h3>Цены на услуги наших мастеров:</h3>
           <table>
             <tr>
@@ -66,20 +68,20 @@
               <td>350 р.</td>
             </tr>
           </table>
-        </article>
+        </div>
 
       </div>
 
-      <h3>Несколько слов о нас:</h3>
-      <div class="bottom-row">
+      <div class="row">
+        <h3>Несколько слов о нас:</h3>
 
-        <article class="bottom-column-left">
+        <div class="col col6">
           <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-        </article>
+        </div>
 
-        <article class="bottom-column-right">
+        <div class="col col6">
           <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
-        </article>
+        </div>
 
       </div>
     </main>
@@ -87,11 +89,11 @@
 
   <!-- Футер -->
   <footer>
-    <div class="layout-center-wrapper">
+    <div class="container">
 
       <div class="footer-section">
         <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки павлова, д. 13<br>
+           Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
            Телефон: +7 (495) 666-02-666</p>
       </div>
 
