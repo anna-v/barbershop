@@ -9,6 +9,9 @@
   width: 960px;
   margin: 0 auto;
   padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .col {
@@ -16,6 +19,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .row {
@@ -35,18 +39,14 @@
 
 .col4 {
   width: 33.33%;
-  padding: 0 20px;
-  text-align: center;
 }
 
 .col5 {
   width: 41.66%;
-  margin-left: 8.33%;
 }
 
 .col6 {
   width: 50%;
-  padding: 10px;
 }
 
 .col8 {
@@ -90,6 +90,7 @@ footer {
 }
 
 .footer-section {
+  width:33.33%;
   float: left;
   margin-right: 50px;
 }
