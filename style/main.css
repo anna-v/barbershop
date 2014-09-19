@@ -3,12 +3,24 @@
 * {
   font-family: 'PT Sans', sans-serif;
   text-transform: uppercase;
+  font-size: 14px;
+}
+
+p {
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
   width: 960px;
   margin: 0 auto;
-  padding: 0 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -22,15 +34,16 @@
   padding: 0 10px;
 }
 
-.row {
-  padding: 15px 0;
-}
-
 .row:after,
-.item-id:after {
+.item-id:after,
+.items:after {
   content:'';
   display: table;
   clear: both;
+}
+
+.col2 {
+  width: 16.66%;
 }
 
 .col3 { 
@@ -49,6 +62,10 @@
   width: 50%;
 }
 
+.col7 {
+  width: 58.33%;
+}
+
 .col8 {
   width: 66.66%;
 }
@@ -57,10 +74,41 @@
   width: 75%;
 }
 
+.col10 {
+  width: 83.33%;
+}
+
+.offset1 {
+  margin-left: 8.33%;
+}
+
+.offset2 {
+  margin-left: 16.67%;
+}
+
+.breadcrumbs li {
+  float: left;
+  margin: 0 15px;
+}
+
+ul.breadcrumbs {
+  margin-left: -15px;
+}
+
+main {
+  padding: 60px 0 85px 0;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
 /* General - header */
 
 header {
   padding: 30px 0;
+  background-color: #000000;
 }
 
 ul.menu {
@@ -76,6 +124,11 @@ ul.menu li {
   margin: 0 20px;
 }
 
+header a,
+footer a {
+  color: #ffffff;  
+}
+
 .menu-enter {
   float: right;
   margin-right: 20px;
@@ -85,14 +138,18 @@ ul.menu li {
 /* General - footer */
 
 footer {
-  padding-top: 60px;
-  margin-bottom: 60px;
+  padding: 60px 0;
+  background-color: #212121;
+  color: #ffffff;
+  line-height: 24px;
 }
 
-.footer-section {
-  width:33.33%;
-  float: left;
-  margin-right: 50px;
+.social {
+  text-align: center;
+}
+
+.design {
+  text-align: center;
 }
 
 
@@ -103,34 +160,171 @@ footer {
   text-align: center;
 }
 
+.feature {
+  text-align: center;
+  margin-bottom: 85px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.feature-text {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+section.index {
+  padding: 55px 60px;
+}
+
+section.index.bottom {
+  margin-bottom: 60px;
+}
+
+.date {
+  display: block;
+  font-family: Georgia;
+  font-style: italic;
+  text-transform: none;
+  margin-top: -3px;
+}
+
+.news li {
+  line-height: 24px;
+}
+
+.news li:last-child{
+  margin-top: 35px;  
+}
+
+.news li a{
+  color: #000000;
+}
+
+.index-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.btn {
+  width: 140px;
+  background-color: #000000;
+  text-align: center;
+  line-height: 43px;
+  margin-top: 40px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.btn a {
+  display: block;
+  color: #FFFFFF;
+}
+
+.btn.prev{
+  margin-right: 15px;
+}
+
+form.book {
+  margin-top: 35px;
+}
+
+form.book input[type="text"] {
+  width: 140px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-right: 14px;
+  padding-left: 15px;
+  line-height: 40px;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+form.book input[type="submit"] {
+  border: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  line-height: 43px;
+  width: 300px;
+}
 
 /* Price */
 
 .classics {
   text-align: center;
+  padding: 60px 0 75px 0;
+  font-size: 42px;
+  font-weight: 700;
 }
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+ul.brands li{
+  padding: 0 0 0 20px;
+  margin-bottom: 29px;
+}
+
+ul.brands li:last-child {
+  margin-bottom: 0;
+}
+
+.row-price {
+  padding-top: 70px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  border: 2px solid black;
+  width: 50%;
+  padding: 15px;
+}
+
 
 
 /* Catalog */
 
+.items {
+  margin-top: -10px;
+}
+
 .item-card {
   float: left;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin: 10px;
+}
+
+.item-card h3 {
+  font-size: 14px;
+}
+
+.item-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.item-card:nth-child(3n+1) {
+  margin-left: 0;
 }
 
 .item-card p {
   text-transform: none;
 }
 
-ul.price-bar {
-  margin: 0;
-  padding: 0;
+.item-card-description {
+  padding: 15px;
 }
 
-ul.price-bar li {
-  display: inline-block;
-  list-style: none;
+.price {
+  float: left;
 }
 
 ul.paginator li {
@@ -139,7 +333,7 @@ ul.paginator li {
 }
 
 
-/* Item card */
+/* Item */
 
 .item-id p {
   float: left;
@@ -149,7 +343,25 @@ ul.paginator li {
   float: right;
 }
 
+.item-imgs {
+  font-size: 0;
+}
 
+.item-img {
+  display: inline-block;
+}
+
+.item-img.b {
+  margin-bottom: 20px;
+}
+
+.item-img.s {
+  margin-right: 20px;
+}
+
+.item-img.s:last-child {
+  margin-right: 0;
+}
 
 
 

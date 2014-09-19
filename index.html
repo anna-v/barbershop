@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Barbershop main page</title>
+  <link href="style/reset.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="style/main.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
-  <header>
+  <header>  
     <div class="container"> <!-- Обертка-центровщик -->
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li class="active"><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="col col10">
+          <nav>
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li class="active"><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-        <a href="#">Вход</a>
+        <div class="col col2">
+          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+            <a href="#">Вход</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -37,92 +44,100 @@
     <div class="row">
       <div class="col col4">
         <div class="feature">Быстро</div>
-        <p>Мы делаем свою работу быстро! Два часа пролетят незаметно, и Вы — счастливый обладетель стильной стрижки-минутки!</p>
+        <p class="feature-text">Мы делаем свою работу быстро! Два часа пролетят незаметно, и Вы — счастливый обладетель стильной стрижки-минутки!</p>
       </div>
       <div class="col col4">
         <div class="feature">Круто</div>
-        <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+        <p class="feature-text">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
       </div>
       <div class="col col4">
         <div class="feature">Дорого</div>
-        <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?</p>
+        <p class="feature-text">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?</p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col col6">
-        <div class="title">Новости</div>
-        <ul class="news">
-          <li><a href="#">Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</a><span>25 сентября</span></li>
-          <li><a href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множетсва титулов и наград, пополнил наши стройные ряды</a><span>19 сентября</span></li>
-        </ul>
-        <div class="news-btn"><a href="#">Все новости</a></div>
-      </div>
+    
+    <section class="index">
+      <div class="row">
+        <div class="col col5">
+            <div class="index-title">Новости</div>
+            <ul class="news">
+              <li><a href="#">Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</a><span class="date">25 сентября</span></li>
+              <li><a href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множетсва титулов и наград, пополнил наши стройные ряды</a><span class="date">19 сентября</span></li>
+            </ul>
+            <div class="btn news-btn"><a href="#">Все новости</a></div>
+        </div>
 
-      <div class="col col6">
-        <div class="title">Фотогалерея</div>
-          <div class="interior"><img src="http://placehold.it/285x165" alt="Интерьер"></div>
-          <button class="prev">Назад</button>
-          <button class="next">Вперед</button>
-      </div>   
-    </div>
-
-    <div class="row">
-      <div class="col col6">
-        <div class="title">Контактная информация</div>
-        <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки павлова, д. 13<br>
-           Телефон: +7 (495) 666-02-666<br><br>
-           Время работы:<br>
-           Пн — пт: с 10:00 до 22:00<br>
-           Сб — вс: с 10:00 до 19:00</p>
-        <div class="news-btn">
-          <a href="#"></a>
+        <div class="col col5 offset2">
+          <div class="index-title">Фотогалерея</div>
+            <div class="interior"><img src="http://placehold.it/300x165" alt="Интерьер"></div>
+            <div class="btn prev"><a href="#">Назад</a></div>
+            <div class="btn next"><a href="#">Вперед</a></div>
         </div>
       </div>
+    </section>
 
-      <div class="col col6">
-        <div class="title">Записаться</div>
-        <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <form action="#" method="post" id="order-form">
-          <fieldset>
-            <input type="text" name="date" placeholder="Дата">
-            <input type="text" name="time" placeholder="Время">
-          </fieldset>
-          <fieldset>
-            <input type="text" name="name" placeholder="Ваше имя">
-            <input type="text" name="phone" placeholder="Телефон">
-          </fieldset>
-          <input type="submit" class="btn" value="Отправить">
-        </form>
+    <section class="index bottom">
+      <div class="row">
+        <div class="col col5">
+          <div class="index-title">Контактная информация</div>
+          <p>Barbershop «Borodinski»<br>
+             Адрес: г. Москва, ул. Собаки павлова, д. 13<br>
+             Телефон: +7 (495) 666-02-666<br><br>
+             Время работы:<br>
+             Пн — пт: с 10:00 до 22:00<br>
+             Сб — вс: с 10:00 до 19:00</p>
+          <div class="btn prev"><a href="#">Как проехать</a></div>
+          <div class="btn"><a href="#">Обратная связь</a></div>
+        </div>
+
+        <div class="col col5 offset2">
+          <div class="index-title">Записаться</div>
+          <p>Укажите желаемую дату и время, и мы свяжемся с вами для подтверждения брони</p>
+          <form class="book" action="#" method="post" id="order-form">
+            <fieldset>
+              <input type="text" name="date" placeholder="Дата">
+              <input type="text" name="time" placeholder="Время">
+            </fieldset>
+            <fieldset>
+              <input type="text" name="name" placeholder="Ваше имя">
+              <input type="text" name="phone" placeholder="Телефон">
+            </fieldset>
+            <input type="submit" class="btn" value="Отправить">
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 
   <!-- Футер -->
   <footer>
     <div class="container">
 
-      <div class="footer-section">
-        <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
-           Телефон: +7 (495) 666-02-666</p>
-      </div>
-
-      <div class="footer-section">
-        <p>Давайте дружить!</p>
-        <div class="social">
-          <a href="#"><img src="http://placehold.it/40x40" alt="vk"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="fb"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="insta"></a>
+      <div class="row">
+        <div class="col col4">
+          <p>Barbershop «Borodinski»<br>
+             Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
+             Телефон: +7 (495) 666-02-666</p>
         </div>
-      </div>
 
-      <div class="footer-section">
-        <p>Дизайн сайта:</p>
-        <a href="http://glukhanko.ru/">Glukhanko.ru</a>
-      </div>
+        <div class="col col4">
+          <div class="social">
+            <p>Давайте дружить!</p>
+            <div class="social-icons">
+              <a class="social-icon" href="#">vk</a>
+              <a class="social-icon" href="#">fb</a>
+              <a class="social-icon" href="#">insta</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col col2 offset2 design">
+          <p>Дизайн сайта:</p>
+          <a href="http://glukhanko.ru/">Glukhanko.ru</a>
+        </div>
+
+      </div>
     </div>
   </footer>
 </body>

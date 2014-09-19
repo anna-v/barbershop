@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Barbershop / Item card</title>
+  <link href="style/reset.css" rel="stylesheet">
   <link href="style/main.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
     <div class="container"> <!-- Обертка-центровщик -->
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li class="active"><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="col col10">
+          <nav>
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li class="active"><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-        <a href="#">Вход</a>
+        <div class="col col2">
+          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+            <a href="#">Вход</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -32,31 +39,38 @@
   <main>
     <div class="container">
 
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Средства для ухода</a></li>
-        <li>Baxter of California</li>
-      </ul>
+      <div class="row">
+        <div class="col col7">
+
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Магазин</a></li>
+            <li><a href="#">Средства для ухода</a></li>
+            <li>Baxter of California</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="row">
 
         <div class="col col6">
-          <img src="http://placehold.it/460x500" alt="Baxter of California-1">
-          <a class="item_small" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-2"></a>
-          <a class="item_small" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-3"></a>
-          <a class="item_small" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-4"></a>
+          <div class="item-imgs">
+            <a href="#" class="item-img b"><img src="http://placehold.it/460x500" alt="Baxter of California-1"></a>
+            <a class="item-img s" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-2"></a>
+            <a class="item-img s" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-3"></a>
+            <a class="item-img s" href="#"><img src="http://placehold.it/140x150" alt="Baxter of California-4"></a>
+          </div>
         </div>
 
-        <div class="col col5">
+        <div class="col col5 offset1">
 
           <h2>Набор для путешествий<br>
-              <a href="#">Baxter of California</a>
+            <a href="#">Baxter of California</a>
           </h2>
 
           <div class="price-bar">
             <p class="price">2 900 руб.</p>
-            <button type="button" name="buy-btn"><a href="#">купить</a></button>
+            <button type="button" name="buy-btn">купить</button>
           </div>
 
           <div class="item-id">
@@ -84,26 +98,30 @@
   <footer>
     <div class="container">
 
-      <div class="footer-section">
-        <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
-           Телефон: +7 (495) 666-02-666</p>
-      </div>
-
-      <div class="footer-section">
-        <p>Давайте дружить!</p>
-        <div class="social">
-          <a class="social-icon" href="#">vk</a>
-          <a class="social-icon" href="#">fb</a>
-          <a class="social-icon" href="#">insta</a>
+      <div class="row">
+        <div class="col col4">
+          <p>Barbershop «Borodinski»<br>
+             Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
+             Телефон: +7 (495) 666-02-666</p>
         </div>
-      </div>
 
-      <div class="footer-section">
-        <p>Дизайн сайта:</p>
-        <a href="http://glukhanko.ru/">Glukhanko.ru</a>
-      </div>
+        <div class="col col4">
+          <div class="social">
+            <p>Давайте дружить!</p>
+            <div class="social-icons">
+              <a class="social-icon" href="#">vk</a>
+              <a class="social-icon" href="#">fb</a>
+              <a class="social-icon" href="#">insta</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col col2 offset2 design">
+          <p>Дизайн сайта:</p>
+          <a href="http://glukhanko.ru/">Glukhanko.ru</a>
+        </div>
+        
+      </div>
     </div>
   </footer>
 </body>

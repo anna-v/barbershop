@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Barbershop / catalog</title>
+  <link href="style/reset.css" rel="stylesheet">
   <link href="style/main.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
     <div class="container"> <!-- Обертка-центровщик -->
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li class="active"><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="col col10">
+          <nav>
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li class="active"><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-        <a href="#">Вход</a>
+        <div class="col col2">
+          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+            <a href="#">Вход</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -31,17 +38,43 @@
   <!-- Контент -->
   <main>
     <div class="container">
-      <h1>Barbershop borodinski — магазин</h1>
 
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li>Средства для ухода</li>
-      </ul>
+      <div class="row">
+        <div class="col col7">
+
+          <h1>Barbershop Borodinski - магазин</h1>
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Магазин</a></li>
+            <li>Средства для ухода</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="row"> 
 
         <div class="col col3"> <!-- Сайдбар -->
+
+        <!-- Фильтр формами -->
+
+        <h2>Производители</h2>
+        <form action="#" method="post" id="producers-form">
+          <fieldset><input type="checkbox" checked>Baxter of California</fieldset>
+          <fieldset><input type="checkbox">Mr Natty</fieldset>
+          <fieldset><input type="checkbox" checked>Suavecito</fieldset>
+          <fieldset><input type="checkbox">alin+Goetz</fieldset>
+          <fieldset><input type="checkbox">Murray’s</fieldset>
+          <fieldset><input type="checkbox" checked>American Crew</fieldset>
+        </form>
+
+        <h2>Группы товаров:</h2>
+        <form action="#" method="post" id="categories-form">
+          <fieldset><input type="radio" checked>Бритвенные принадлежности</fieldset>
+          <fieldset><input type="radio">Средства для ухода</fieldset>
+          <fieldset><input type="radio" checked>Аксессуары</fieldset>
+        </form>
+
+        <!-- Фильтр ссылками 
           <h2>Производители</h2>
           <ul class="producers">
             <li class="active"><a href="#">Baxter of California</a></li>
@@ -57,70 +90,85 @@
             <li class="active"><a href="#">Бритвенные принадлежности</a></li>
             <li><a href="#">Средства для ухода</a></li>
             <li><a href="#">Аксессуары</a></li>
-          </ul>
-        </div>
+          </ul> -->
+        
+        </div> 
 
         <div class="col col9">
-          <div class="items">
-            <div class="item-card testcard">
+          <div class="items"> 
+
+            <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Набор для путешествий">
-              <h3>Baxter of California</h3>
-              <p>Набор для путешествий</p>
-              <ul class="price-bar">
-                <li class="price">2 900 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>Baxter of California</h3>
+                <p>Набор для путешествий</p>
+                <div class="price-bar">
+                  <p class="price">2 900 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>
+              </div>
             </div>
 
             <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Увлажняющий кондиционер">
-              <h3>Baxter of California</h3>
-              <p>Увлажняющий кондиционер</p>
-              <ul class="price-bar">
-                <li class="price">750 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>Baxter of California</h3>
+                <p>Увлажняющий кондиционер</p>
+                <div class="price-bar">
+                  <p class="price">750 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>
+              </div>
             </div>
 
             <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Гель для волос">
-              <h3>Suavecito</h3>
-              <p>Гель для волос</p>
-              <ul class="price-bar">
-                <li class="price">290 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>Suavecito</h3>
+                <p>Гель для волос</p>
+                <div class="price-bar">
+                  <p class="price">290 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>
+              </div>
             </div>
 
             <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Глина для укладки волос">
-              <h3>American crew</h3>
-              <p>Глина для укладки волос</p>
-              <ul class="price-bar">
-                <li class="price">500 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>American crew</h3>
+                <p>Глина для укладки волос</p>
+                <div class="price-bar">
+                  <p class="price">500 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>
+              </div>
             </div>
 
             <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Гель для волос">
-              <h3>American crew</h3>
-              <p>Гель для волос</p>
-              <ul class="price-bar">
-                <li class="price">300 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>American crew</h3>
+                <p>Гель для волос</p>
+                <div class="price-bar">
+                  <p class="price">300 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>
+              </div>
             </div>
 
             <div class="item-card">
               <img src="http://placehold.it/220x165" alt="Набор для бритья">
-              <h3>Baxter of California</h3>
-              <p>Набор для бритья</p>
-              <ul class="price-bar">
-                <li class="price">3 900 руб.</li>
-                <li class="buy-btn"><a href="#">купить</a></li>
-              </ul>
+              <div class="item-card-description">
+                <h3>Baxter of California</h3>
+                <p>Набор для бритья</p>
+                <div class="price-bar">
+                  <p class="price">3 900 руб.</p>
+                  <button type="button" name="buy-btn">купить</button>
+                </div>            
+              </div>
             </div>
+
           </div>
 
           <ul class="paginator">
@@ -139,26 +187,30 @@
   <footer>
     <div class="container">
 
-      <div class="footer-section">
-        <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
-           Телефон: +7 (495) 666-02-666</p>
-      </div>
-
-      <div class="footer-section">
-        <p>Давайте дружить!</p>
-        <div class="social">
-          <a href="#"><img src="http://placehold.it/40x40" alt="vk"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="fb"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="insta"></a>
+      <div class="row">
+        <div class="col col4">
+          <p>Barbershop «Borodinski»<br>
+             Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
+             Телефон: +7 (495) 666-02-666</p>
         </div>
-      </div>
 
-      <div class="footer-section">
-        <p>Дизайн сайта:</p>
-        <a href="http://glukhanko.ru/">Glukhanko.ru</a>
-      </div>
+        <div class="col col4">
+          <div class="social">
+            <p>Давайте дружить!</p>
+            <div class="social-icons">
+              <a class="social-icon" href="#">vk</a>
+              <a class="social-icon" href="#">fb</a>
+              <a class="social-icon" href="#">insta</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col col2 offset2 design">
+          <p>Дизайн сайта:</p>
+          <a href="http://glukhanko.ru/">Glukhanko.ru</a>
+        </div>
+
+      </div>
     </div>
   </footer>
 </body>
