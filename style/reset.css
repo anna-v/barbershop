@@ -14,15 +14,20 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, main {
     margin:0;
     padding:0;
     border:0;
     outline:0;
-    /*font-size:100%;*/
+    font-size:100%;
     vertical-align:baseline;
     background:transparent;
 }
+
+input:focus {
+    outline: none;
+}
+
 body {
     line-height:1;
 }
@@ -33,14 +38,14 @@ footer,header,hgroup,menu,nav,section {
 nav ul {
     list-style:none;
 }
-/*blockquote, q {
+blockquote, q {
     quotes:none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
     content:'';
     content:none;
-}*/
+}
 a {
     margin:0;
     padding:0;
