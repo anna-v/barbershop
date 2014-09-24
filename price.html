@@ -2,56 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Barbershop text page</title>
+  <title>Barbershop / price list</title>
+  <link href="style/reset.css" rel="stylesheet">
+  <link href="style/main.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
-    <div class="layout-center-wrapper"> <!-- Обертка-центровщик -->
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      
-      <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-        <a href="#">Вход</a>
+    <div class="container"> <!-- Обертка-центровщик -->
+      <div class="row">
+        <div class="col col10">
+          <nav>
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li class="active"><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col col2">
+          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+            <a href="#">Вход</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Контентная часть -->
-  <div class="layout-center-wrapper">
+  <div class="container">
     <main>
+      <div class="row">
+        <div class="col col7">
 
-      <h1>Barbershop Borodinski - прайс-лист</h1>
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li>Прайс-лист</li>
-      </ul>
+          <h1>Barbershop Borodinski - прайс-лист</h1>
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li>Прайс-лист</li>
+          </ul>
+        </div>
+      </div>
 
-      <p class="classics">Истинно мужская классика</p>
+      <div class="classics">Истинно мужская классика</div>
 
-      <div class="top-row">
-
-        <article class="top-left-column">
+      <div class="row">
+        <div class="col col4">
           <h3>Мы используем только лучшие средства:</h3>
-          <ul>
+        </div>
+
+        <div class="col col3 offset2">
+          <h3>Цены на услуги наших мастеров:</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col4">
+          <ul class="brands">
             <li>Baxter of California</li>
             <li>Mr Natty</li>
             <li>Suavecito</li>
             <li>Malin+Goetz</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="top-right-column">
-          <h3>Цены на услуги наших мастеров:</h3>
+        <div class="col col6 offset2">
           <table>
             <tr>
               <td>Стрижка</td>
@@ -66,20 +86,23 @@
               <td>350 р.</td>
             </tr>
           </table>
-        </article>
-
+        </div>
       </div>
 
-      <h3>Несколько слов о нас:</h3>
-      <div class="bottom-row">
-
-        <article class="bottom-column-left">
+      <div class="row row-price">
+        <div class="col col4">
+          <h3 class="about-us">Несколько слов о нас:</h3>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col5">
           <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-        </article>
+        </div>
 
-        <article class="bottom-column-right">
+        <div class="col col5 offset1">
           <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
-        </article>
+        </div>
 
       </div>
     </main>
@@ -87,28 +110,32 @@
 
   <!-- Футер -->
   <footer>
-    <div class="layout-center-wrapper">
+    <div class="container">
 
-      <div class="footer-section">
-        <p>Barbershop «Borodinski»<br>
-           Адрес: г. Москва, ул. Собаки павлова, д. 13<br>
-           Телефон: +7 (495) 666-02-666</p>
-      </div>
-
-      <div class="footer-section">
-        <p>Давайте дружить!</p>
-        <div class="social">
-          <a href="#"><img src="http://placehold.it/40x40" alt="vk"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="fb"></a>
-          <a href="#"><img src="http://placehold.it/40x40" alt="insta"></a>
+      <div class="row">
+        <div class="col col4">
+          <p>Barbershop «Borodinski»<br>
+             Адрес: г. Москва, ул. Собаки Павлова, д. 13<br>
+             Телефон: +7 (495) 666-02-666</p>
         </div>
-      </div>
 
-      <div class="footer-section">
-        <p>Дизайн сайта:</p>
-        <a href="http://glukhanko.ru/">Glukhanko.ru</a>
-      </div>
+        <div class="col col4">
+          <div class="social">
+            <p>Давайте дружить!</p>
+            <div class="social-icons">
+              <a class="social-icon" href="#">vk</a>
+              <a class="social-icon" href="#">fb</a>
+              <a class="social-icon" href="#">insta</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col col2 offset2 design">
+          <p>Дизайн сайта:</p>
+          <a href="http://glukhanko.ru/">Glukhanko.ru</a>
+        </div>
+      
+      </div>
     </div>
   </footer>
 </body>
