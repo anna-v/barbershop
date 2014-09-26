@@ -7,7 +7,7 @@
   <link href="style/main.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
-<body class="catalog-body">
+<body>
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
@@ -18,7 +18,7 @@
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Прайс-лист</a></li>
-          <li><a class="active" href="#">Магазин</a></li>
+          <li class="active"><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -33,16 +33,12 @@
   <main>
     <div class="container">
 
-      <div class="row">
-        <div class="col">
-          <h1>Barbershop Borodinski - магазин</h1>
-          <ul class="breadcrumbs">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Магазин</a></li>
-            <li>Средства для ухода</li>
-          </ul>
-        </div>
-      </div>
+      <div class="page-title">Barbershop Borodinski - магазин</div>
+      <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Магазин</a></li>
+        <li>Средства для ухода</li>
+      </ul>
 
       <div class="row"> 
 
@@ -50,21 +46,21 @@
 
         <!-- Фильтр формами -->
 
-        <form id="producers-form">
+        <form id="catalog-form">
         <h2>Производители</h2>
-          <p><input id="c1" type="checkbox" name="1st" checked hidden><label for="c1">Baxter of California</label></p>
-          <p><input id="c2" type="checkbox" name="2nd" hidden><label for="c2">Mr Natty</label></p>
-          <p><input id="c3" type="checkbox" name="3rd" checked hidden><label for="c3">Suavecito</label></p>
-          <p><input id="c4" type="checkbox" name="4th" hidden><label for="c4">Malin+Goetz</label></p>
-          <p><input id="c5" type="checkbox" name="5th" hidden><label for="c5">Murray’s</label></p>
-          <p><input id="c6" type="checkbox" name="6th" checked hidden><label for="c6">American Crew</label></p>
+          <p><input id="c1" type="checkbox" name="1st" checked><label for="c1">Baxter of California</label></p>
+          <p><input id="c2" type="checkbox" name="2nd"><label for="c2">Mr Natty</label></p>
+          <p><input id="c3" type="checkbox" name="3rd" checked><label for="c3">Suavecito</label></p>
+          <p><input id="c4" type="checkbox" name="4th"><label for="c4">Malin+Goetz</label></p>
+          <p><input id="c5" type="checkbox" name="5th"><label for="c5">Murray’s</label></p>
+          <p><input id="c6" type="checkbox" name="6th" checked><label for="c6">American Crew</label></p>
         </form>
 
-        <form id="categories-form">
-        <h2>Группы товаров:</h2>
-          <p><input id="r1" type="radio" name="1st" checked hidden><label for="r1">Бритвенные принадлежности</label></p>
-          <p><input id="r2" type="radio" name="2nd" hidden><label for="r2">Средства для ухода</label></p>
-          <p><input id="r3" type="radio" name="3rd" hidden><label for="r3">Аксессуары</label></p>
+        <form id="catalog-form">
+        <h2 class="categories-title">Группы товаров:</h2>
+          <p><input id="r1" type="radio" name="1st" checked><label for="r1">Бритвенные принадлежности</label></p>
+          <p><input id="r2" type="radio" name="2nd"><label for="r2">Средства для ухода</label></p>
+          <p><input id="r3" type="radio" name="3rd"><label for="r3">Аксессуары</label></p>
         </form>
 
         <!-- Фильтр ссылками 
@@ -97,7 +93,7 @@
                 <p>Набор для путешествий</p>
                 <div class="price-bar">
                   <p class="price">2 900 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>
               </div>
             </figure>
@@ -109,7 +105,7 @@
                 <p>Увлажняющий кондиционер</p>
                 <div class="price-bar">
                   <p class="price">750 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>
               </div>
             </figure>
@@ -121,7 +117,7 @@
                 <p>Гель для волос</p>
                 <div class="price-bar">
                   <p class="price">290 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>
               </div>
             </figure>
@@ -133,7 +129,7 @@
                 <p>Глина для укладки волос</p>
                 <div class="price-bar">
                   <p class="price">500 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>
               </div>
             </figure>
@@ -145,7 +141,7 @@
                 <p>Гель для волос</p>
                 <div class="price-bar">
                   <p class="price">300 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>
               </div>
             </figure>
@@ -157,7 +153,7 @@
                 <p>Набор для бритья</p>
                 <div class="price-bar">
                   <p class="price">3 900 руб.</p>
-                  <a class="buy-btn" href="#">купить</a>
+                  <a class="price-text" href="#">купить</a>
                 </div>            
               </div>
             </figure>
