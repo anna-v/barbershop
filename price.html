@@ -12,58 +12,50 @@
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>
     <div class="container"> <!-- Обертка-центровщик -->
-      <div class="row">
-        <div class="col col10">
-          <nav>
-            <ul class="menu">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Новости</a></li>
-              <li class="active"><a href="#">Прайс-лист</a></li>
-              <li><a href="#">Магазин</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Информация</a></li>
+            <li><a href="index.html#news">Новости</a></li>
+            <li class="active"><a href="price.html">Прайс-лист</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+          <a class="enter" href="#">Вход</a>
         </div>
-
-        <div class="col col2">
-          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-            <a href="#">Вход</a>
-          </div>
-        </div>
-      </div>
     </div>
   </header>
 
+  <!-- Форма входа -->
+  <form action="#" method="get" id="enter-form">
+    <h2>Личный кабинет</h2>
+    <p class="enter-form-text">Введите пожалуйста свой логин и пароль</p>
+    <a class="enter-form-forgot" href="#">Если вы забыли пароль</a>
+    <p class="login"><input type="text" id="enter-1" name="enter-login" placeholder="Логин"></p>
+    <p class="pass"><input type="password" id="enter-2" name="enter-pass" placeholder="Пароль"></p>
+    <p class="remember"><input type="checkbox" id="enter-3" name="enter-remember" checked><label for="enter-3">Запомните меня</label>
+    <a class="forgot-pass" href="#">Я забыл пароль!</a></p>
+    <input type="submit" id="enter-4" name="enter-submit" class="btn" value="Войти">
+    <a class="close" href="index.html"></a>
+  </form>
+
   <!-- Контентная часть -->
   <div class="container">
-    <main>
-      <div class="row">
-        <div class="col col7">
+    <main class="item">
 
-          <h1>Barbershop Borodinski - прайс-лист</h1>
-          <ul class="breadcrumbs">
-            <li><a href="#">Главная</a></li>
-            <li>Прайс-лист</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="classics">Истинно мужская классика</div>
+      <div class="page-title">Barbershop Borodinski - прайс-лист</div>
+      <ul class="breadcrumbs price">
+        <li><a href="#">Главная</a></li>
+        <li>Прайс-лист</li>
+      </ul>
+      <div class="classics">Истинно мужская классика </div>
 
       <div class="row">
-        <div class="col col4">
-          <h3>Мы используем только лучшие средства:</h3>
-        </div>
-
-        <div class="col col3 offset2">
-          <h3>Цены на услуги наших мастеров:</h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col col4">
-          <ul class="brands">
+        <div class="col col6">
+          <h3 class="price-title">Мы используем только лучшие средства:</h3>
+          <ul class="list ">
             <li>Baxter of California</li>
             <li>Mr Natty</li>
             <li>Suavecito</li>
@@ -71,37 +63,33 @@
           </ul>
         </div>
 
-        <div class="col col6 offset2">
+        <div class="col col6">
           <table>
+          <h3 class="price-title price-table">Цены на услуги наших мастеров:</h3>
             <tr>
               <td>Стрижка</td>
-              <td>1500 р.</td>
+              <td class="price-text">1500 р.</td>
             </tr>
             <tr>
               <td>Стрижка бороды</td>
-              <td>500 р.</td>
+              <td class="price-text">500 р.</td>
             </tr>
             <tr>
               <td>Накрутка усов</td>
-              <td>350 р.</td>
+              <td class="price-text">350 р.</td>
             </tr>
           </table>
         </div>
       </div>
-
-      <div class="row row-price">
-        <div class="col col4">
-          <h3 class="about-us">Несколько слов о нас:</h3>
-        </div>
-      </div>
       
       <div class="row">
-        <div class="col col5">
-          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        <h3 class="price-title about-us">Несколько слов о нас:</h3>
+        <div class="col col6">
+          <p class="price-bottom">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
         </div>
 
-        <div class="col col5 offset1">
-          <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+        <div class="col col6">
+          <p class="price-bottom">Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
         </div>
 
       </div>
@@ -123,9 +111,9 @@
           <div class="social">
             <p>Давайте дружить!</p>
             <div class="social-icons">
-              <a class="social-icon" href="#">vk</a>
-              <a class="social-icon" href="#">fb</a>
-              <a class="social-icon" href="#">insta</a>
+              <a class="social-icon vk" href="https://vk.com/barbershop_borodinski" target="_blank">vk</a>
+              <a class="social-icon fb" href="#" target="_blank">fb</a>
+              <a class="social-icon insta" href="#" target="_blank">insta</a>
             </div>
           </div>
         </div>

@@ -14,12 +14,12 @@
     <div class="container"> <!-- Обертка-центровщик -->
       <nav>
         <ul class="menu">
-          <li><a href="#">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li class="active"><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="index.html#news">Новости</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li class="active"><a href="catalog.html">Магазин</a></li>
+          <li><a href="index.html#contacts">Контакты</a></li>
         </ul>
       </nav>
 
@@ -28,6 +28,19 @@
       </div>
     </div>
   </header>
+
+  <!-- Форма входа -->
+  <form action="#" method="get" id="enter-form">
+    <h2>Личный кабинет</h2>
+    <p class="enter-form-text">Введите пожалуйста свой логин и пароль</p>
+    <a class="enter-form-forgot" href="#">Если вы забыли пароль</a>
+    <p class="login"><input type="text" id="enter-1" name="enter-login" placeholder="Логин"></p>
+    <p class="pass"><input type="password" id="enter-2" name="enter-pass" placeholder="Пароль"></p>
+    <p class="remember"><input type="checkbox" id="enter-3" name="enter-remember" checked><label for="enter-3">Запомните меня</label>
+    <a class="forgot-pass" href="#">Я забыл пароль!</a></p>
+    <input type="submit" id="enter-4" name="enter-submit" class="btn" value="Войти">
+    <a class="close" href="index.html"></a>
+  </form>
 
   <!-- Контент -->
   <main>
@@ -58,7 +71,7 @@
 
         <form id="catalog-form">
         <h2 class="categories-title">Группы товаров:</h2>
-          <p><input id="r1" type="radio" name="cat-radio" checked><label for="r1">Бритвенные принадлежности Бритвенные принадлежности</label></p>
+          <p><input id="r1" type="radio" name="cat-radio" checked><label for="r1">Бритвенные принадлежности</label></p>
           <p><input id="r2" type="radio" name="cat-radio"><label for="r2">Средства для ухода</label></p>
           <p><input id="r3" type="radio" name="cat-radio"><label for="r3">Аксессуары</label></p>
         </form>
@@ -87,7 +100,7 @@
           <div class="items"> 
 
             <figure class="item-card">
-              <div class="img-wrapper"><img src="img/catalog-content-1.jpg" height="165" width="220" alt="Набор для путешествий"></div>
+              <a href="item.html"><div class="img-wrapper"><img src="img/catalog-content-1.jpg" height="165" width="220" alt="Набор для путешествий"></div></a>
               <div class="item-card-description">
                 <h3>Baxter of California</h3>
                 <p>Набор для путешествий</p>
@@ -160,12 +173,12 @@
 
           </div>
 
-          <ul class="paginator">
-            <li><a href="#">1</a></li>
-            <li class="active">2</li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-          </ul>
+          <div class="paginator">
+            <a href="#">1</a>
+            <p class="active">2</p>
+            <a href="#">3</a>
+            <a href="#">4</a>
+          </div>
 
         </div>
       </div>
@@ -187,9 +200,9 @@
           <div class="social">
             <p>Давайте дружить!</p>
             <div class="social-icons">
-              <a class="social-icon vk" href="#">vk</a>
-              <a class="social-icon fb" href="#">fb</a>
-              <a class="social-icon insta" href="#">insta</a>
+              <a class="social-icon vk" href="https://vk.com/barbershop_borodinski" target="_blank">vk</a>
+              <a class="social-icon fb" href="#" target="_blank">fb</a>
+              <a class="social-icon insta" href="#" target="_blank">insta</a>
             </div>
           </div>
         </div>
