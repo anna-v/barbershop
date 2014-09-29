@@ -7,111 +7,127 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="style/main.css" rel="stylesheet">
 </head>
-<body>
+<body class="main-body">
 
   <!-- Хедер, он же верхнее навигационное меню -->
   <header>  
     <div class="container"> <!-- Обертка-центровщик -->
-      <div class="row">
-        <div class="col col10">
-          <nav>
-            <ul class="menu">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Прайс-лист</a></li>
-              <li class="active"><a href="#">Магазин</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="index.html">Главная</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#news">Новости</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
 
-        <div class="col col2">
-          <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
-            <a href="#">Вход</a>
-          </div>
-        </div>
+      <div class="menu-enter"> <!-- Кнопку входа оборачиваем отдельным дивом, т.к. предполагается видоизменение в форму авторизации -->
+        <a class="enter" href="#">Вход</a>
       </div>
     </div>
   </header>
 
+
+  <!-- Форма входа -->
+  <form action="#" method="get" id="enter-form">
+    <h2>Личный кабинет</h2>
+    <p class="enter-form-text">Введите пожалуйста свой логин и пароль</p>
+    <a class="enter-form-forgot" href="#">Если вы забыли пароль</a>
+    <p class="login"><input type="text" id="enter-1" name="enter-login" placeholder="Логин"></p>
+    <p class="pass"><input type="password" id="enter-2" name="enter-pass" placeholder="Пароль"></p>
+    <p class="remember"><input type="checkbox" id="enter-3" name="enter-remember" checked><label for="enter-3">Запомните меня</label>
+    <a class="forgot-pass" href="#">Я забыл пароль!</a></p>
+    <input type="submit" id="enter-4" name="enter-submit" class="btn" value="Войти">
+    <a class="close" href="index.html"></a>
+  </form>
+
+
   <!-- Контент -->
   <div class="container">
+    <main class="main-index">
       <div class="logo">
-          <a href="#">Barbershop Borodinski</a>
+          <a href="index.html">Barbershop Borodinski</a>
       </div>
 
-    <div class="row">
-      <div class="col col4">
-        <div class="feature">Быстро</div>
-        <p class="feature-text">Мы делаем свою работу быстро! Два часа пролетят незаметно, и Вы — счастливый обладетель стильной стрижки-минутки!</p>
+      <div class="row">
+        <div class="col col4">
+          <div class="feature">
+            <p class="feature-title">Быстро</p>
+            <p class="feature-description">Мы делаем свою работу быстро! Два часа пролетят незаметно, и Вы — счастливый обладетель стильной стрижки-минутки!</p>
+          </div>
+        </div>
+        <div class="col col4">
+          <div class="feature">
+            <p class="feature-title">Круто</p>
+            <p class="feature-description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+          </div>
+        </div>
+        <div class="col col4">
+          <div class="feature">
+            <p class="feature-title">Дорого</p>
+            <p class="feature-description">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?</p>
+          </div>
+        </div>
       </div>
-      <div class="col col4">
-        <div class="feature">Круто</div>
-        <p class="feature-text">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
-      </div>
-      <div class="col col4">
-        <div class="feature">Дорого</div>
-        <p class="feature-text">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?</p>
-      </div>
-    </div>
-
     
-    <section class="index">
-      <div class="row">
-        <div class="col col5">
-            <div class="index-title">Новости</div>
-            <ul class="news">
-              <li><a href="#">Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</a><span class="date">25 сентября</span></li>
-              <li><a href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множетсва титулов и наград, пополнил наши стройные ряды</a><span class="date">19 сентября</span></li>
-            </ul>
-            <div class="btn news-btn"><a href="#">Все новости</a></div>
-        </div>
+      <section class="index">
+        <div class="row">
 
-        <div class="col col5 offset2">
-          <div class="index-title">Фотогалерея</div>
-            <div class="interior"><img src="http://placehold.it/300x165" alt="Интерьер"></div>
-            <div class="btn prev"><a href="#">Назад</a></div>
-            <div class="btn next"><a href="#">Вперед</a></div>
-        </div>
-      </div>
-    </section>
+          <div class="col col5">
+              <a name="news"><h2 class="index-title">Новости</h2></a>
+              <ul class="news">
+                <li><a href="#">Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</a><span class="date-25sep">25 сентября</span></li>
+                <li><a href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множетсва титулов и наград, пополнил наши стройные ряды</a><span class="date-29sep">19 сентября</span></li>
+              </ul>
+              <a class="btn news-btn" href="#">Все новости</a>
+          </div>
 
-    <section class="index bottom">
-      <div class="row">
-        <div class="col col5">
-          <div class="index-title">Контактная информация</div>
-          <p>Barbershop «Borodinski»<br>
-             Адрес: г. Москва, ул. Собаки павлова, д. 13<br>
-             Телефон: +7 (495) 666-02-666<br><br>
-             Время работы:<br>
-             Пн — пт: с 10:00 до 22:00<br>
-             Сб — вс: с 10:00 до 19:00</p>
-          <div class="btn prev"><a href="#">Как проехать</a></div>
-          <div class="btn"><a href="#">Обратная связь</a></div>
-        </div>
+          <div class="col col5 offset2">
+            <h2 class="index-title">Фотогалерея</h2>
+              <div class="interior"><img src="img/interior-1.jpg" height="164" width="286" alt="Интерьер"></div>
+              <a class="btn prev" href="#">Назад</a>
+              <a class="btn next" href="#">Вперед</a>
+          </div>
 
-        <div class="col col5 offset2">
-          <div class="index-title">Записаться</div>
-          <p>Укажите желаемую дату и время, и мы свяжемся с вами для подтверждения брони</p>
-          <form class="book" action="#" method="post" id="order-form">
-            <fieldset>
+        </div>
+      </section>
+
+      <section class="index">
+        <div class="row">
+
+          <div class="col col5">
+            <a name="contacts"><h2 class="index-title">Контактная информация</h2></a>
+            <p class="index-contacts">Barbershop «Borodinski»</p>
+            <p class="index-contacts">Адрес: г. Москва, ул. Собаки павлова, д. 13</p>
+            <p class="index-contacts phone-text">Телефон: +7 (495) 666-02-666</p>
+            <p class="index-contacts">Время работы:</p>
+            <p class="index-contacts">Пн — пт: с 10:00 до 22:00</p>
+            <p class="index-contacts last">Сб — вс: с 10:00 до 19:00</p>
+            <a class="btn prev" href="#">Как проехать</a>
+            <a class="btn" href="#">Обратная связь</a>
+          </div>
+
+          <div class="col col5 offset2">
+            <form id="book-form" action="#" method="post">
+              <h2 class="index-title">Записаться</h2>
+              <p class="form-text">Укажите желаемую дату и время, и мы свяжемся с вами для подтверждения брони</p>
               <input type="text" name="date" placeholder="Дата">
               <input type="text" name="time" placeholder="Время">
-            </fieldset>
-            <fieldset>
               <input type="text" name="name" placeholder="Ваше имя">
               <input type="text" name="phone" placeholder="Телефон">
-            </fieldset>
-            <input type="submit" class="btn" value="Отправить">
-          </form>
+              <input type="submit" class="btn" value="Отправить">
+            </form>
+          </div>
+      
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   </div>
 
   <!-- Футер -->
-  <footer>
+  <footer class="index">
     <div class="container">
 
       <div class="row">
@@ -125,9 +141,9 @@
           <div class="social">
             <p>Давайте дружить!</p>
             <div class="social-icons">
-              <a class="social-icon" href="#">vk</a>
-              <a class="social-icon" href="#">fb</a>
-              <a class="social-icon" href="#">insta</a>
+              <a class="social-icon vk" href="https://vk.com/barbershop_borodinski" target="_blank">vk</a>
+              <a class="social-icon fb" href="#" target="_blank">fb</a>
+              <a class="social-icon insta" href="#" target="_blank">insta</a>
             </div>
           </div>
         </div>
