@@ -62,7 +62,6 @@
       && (!(e.target.parentNode==popup)) && (!(e.target.parentNode.parentNode==popup))) {
       popup.classList.remove("enter-form-show");
       popup.classList.remove("enter-form-animation");
-      console.log(e.target.parentNode);
     }
   });
 
@@ -77,28 +76,29 @@
   }
 
   // Смена фото в галерее на главной странице
-  container = document.querySelector(".gallery"),
-  btn = container.querySelectorAll(".btn"),
-  photos = Array.prototype.slice.call(document.querySelectorAll(".int-photo")),
-  photoVisible = document.querySelector(".int-photo.visible"),
-  i;
+  container = document.querySelector(".gallery");
+  if (!(container===null)) {
+    btn = container.querySelectorAll(".btn"),
+    photos = Array.prototype.slice.call(document.querySelectorAll(".int-photo")),
+    photoVisible = document.querySelector(".int-photo.visible");
 
-  for (i = 0; i<btn.length; i++) {
-    btn[i].addEventListener("click", function(event) {
-      var visible;
-      event.preventDefault();
-      visible = document.getElementsByClassName("int-photo visible"),
-      indexOfVisible = photos.indexOf(visible[0]);
+    for (i = 0; i<btn.length; i++) {
+      btn[i].addEventListener("click", function(event) {
+        var visible;
+        event.preventDefault();
+        visible = document.getElementsByClassName("int-photo visible"),
+        indexOfVisible = photos.indexOf(visible[0]);
 
-      if ((this.className === "btn next") && (indexOfVisible < (photos.length-1))) {
-        photos[indexOfVisible].classList.remove('visible');
-        photos[indexOfVisible+1].classList.add('visible');
-      }
-      else if ((this.className === "btn prev") && (indexOfVisible > 0)) {
-        photos[indexOfVisible].classList.remove('visible');
-        photos[indexOfVisible-1].classList.add('visible');
-      }
-    });
+        if ((this.className === "btn next") && (indexOfVisible < (photos.length-1))) {
+          photos[indexOfVisible].classList.remove('visible');
+          photos[indexOfVisible+1].classList.add('visible');
+        }
+        else if ((this.className === "btn prev") && (indexOfVisible > 0)) {
+          photos[indexOfVisible].classList.remove('visible');
+          photos[indexOfVisible-1].classList.add('visible');
+        }
+      });
+    }
   }
 
   // Смена фото в карточке товара
